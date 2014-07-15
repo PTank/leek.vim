@@ -9,5 +9,9 @@ copy directory to your .vim/
 
 # todo
 
-* comment
-* indent
+* see to vundle
+* auto complete (add all function?)
+* macro?
+
+* function to test compilation
+* include?
