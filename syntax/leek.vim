@@ -40,18 +40,10 @@ syn match LeekScriptOperator	display "\%(+\|-\|/\|*\|=\|\^\|&\||\|!\|>\|<\|%\)=\
 syn keyword LeekScriptBoolean	true false
 
 " function
-
-syn match   LeekScriptFunction      "\<function\>"
-syn region  LeekScriptFunctionFold  start="\<function\>.*[^};]$" end="^\z1}.*$" transparent fold keepend
-syn sync match LeekScriptSync       grouphere LeekScriptFunctionFold "\<function\>"
-syn sync match LeekScriptSync       grouphere NONE "^}"
-
-setlocal foldmethod=syntax
-setlocal foldtext=getline(v:foldstart)
+syn keyword   LeekScriptFunction      function
 
 
 " higlist
-
 let b:current_syntax = "LeekScript"
 
 hi def link LeekScriptKeyword 		Statement
